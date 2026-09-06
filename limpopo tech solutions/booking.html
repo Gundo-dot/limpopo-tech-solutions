@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Limpopo Tech Solutions | Booking & Quote</title>
+    <meta name="description" content="Request a service quote from Limpopo Tech Solutions.">
+    <title>Limpopo Tech Solutions | Booking &amp; Quote</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header -->
     <header class="site-header">
         <div class="container nav-container">
             <div class="logo">Limpopo Tech Solutions</div>
-            <nav class="navigation">
+            <nav class="navigation" aria-label="Main navigation">
                 <a href="index.html">Home</a>
                 <a href="services.html">Services</a>
                 <a class="active" href="booking.html">Booking / Quote</a>
@@ -18,18 +20,22 @@
         </div>
     </header>
 
+    <!-- Main Content -->
     <main>
+        <!-- Page Banner -->
         <section class="page-banner">
             <div class="container">
-                <p class="eyebrow">SERVICE REQUEST</p>
-                <h1>Service Booking & Quote Calculator</h1>
+                <p class="eyebrow">Service Request</p>
+                <h1>Service Booking &amp; Quote Calculator</h1>
                 <p>Complete the form below to calculate an estimated service price.</p>
             </div>
         </section>
 
+        <!-- Booking Form -->
         <section class="section">
             <div class="container">
                 <form id="quoteForm" class="booking-form" novalidate>
+                    <!-- Customer Information -->
                     <h2>Customer Information</h2>
                     <div class="form-grid">
                         <div class="form-group">
@@ -42,6 +48,7 @@
                         </div>
                     </div>
 
+                    <!-- Service Information -->
                     <h2>Service Information</h2>
                     <div class="form-grid">
                         <div class="form-group">
@@ -60,6 +67,7 @@
                         </div>
                     </div>
 
+                    <!-- Service Urgency -->
                     <fieldset>
                         <legend>Service Urgency</legend>
                         <label class="radio-label">
@@ -72,6 +80,7 @@
                         </label>
                     </fieldset>
 
+                    <!-- On-site Visit -->
                     <div class="checkbox-group">
                         <label>
                             <input type="checkbox" id="onsite">
@@ -79,17 +88,20 @@
                         </label>
                     </div>
 
+                    <!-- Problem Description -->
                     <div class="form-group">
                         <label for="description">Problem Description</label>
                         <textarea id="description" rows="6" placeholder="Describe your IT problem..."></textarea>
                     </div>
 
+                    <!-- Buttons -->
                     <div class="button-group">
                         <button type="button" class="btn" id="calculateBtn">Calculate Quote</button>
                         <button type="button" class="btn btn-dark" id="submitBtn">Submit Booking</button>
                         <button type="reset" class="btn btn-light">Clear</button>
                     </div>
 
+                    <!-- Result Display -->
                     <div id="result" class="result-box" aria-live="polite">
                         Your estimated quote will appear here.
                     </div>
@@ -98,6 +110,7 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
             <p>&copy; 2026 Limpopo Tech Solutions. Computer Programming Level 4 Assessment Project.</p>
