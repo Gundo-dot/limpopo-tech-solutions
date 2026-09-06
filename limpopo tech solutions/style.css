@@ -1,0 +1,462 @@
+/* =====================================================
+   LIMPOPO TECH SOLUTIONS
+   NC(V) COMPUTER PROGRAMMING LEVEL 4
+   External stylesheet for Subtask 2
+===================================================== */
+
+:root {
+    --primary: #193a5c;
+    --secondary: #2b6ea6;
+    --dark: #111827;
+    --light: #f2f6f9;
+    --white: #ffffff;
+    --text: #1f2933;
+    --muted: #64748b;
+    --border: #cbd5e1;
+    --error: #dc2626;
+    --error-bg: #fef2f2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.6;
+}
+
+.container {
+    width: 92%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* HEADER */
+.site-header {
+    background: var(--primary);
+    color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.navigation a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.navigation a:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.navigation a.active {
+    background: var(--secondary);
+}
+
+/* HERO */
+.hero {
+    background: var(--light);
+    padding: 80px 0;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.eyebrow {
+    color: var(--secondary);
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.1;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.hero-image img {
+    width: 100%;
+    display: block;
+    border-radius: 18px;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    border: none;
+    background: var(--secondary);
+    color: var(--white);
+    padding: 12px 20px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+.btn-dark {
+    background: var(--dark);
+}
+
+.btn-light {
+    background: #e5e7eb;
+    color: var(--text);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* SECTIONS */
+.section {
+    padding: 65px 0;
+}
+
+.section h2 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.lead {
+    max-width: 800px;
+    font-size: 1.05rem;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+/* SERVICE CARDS */
+.services-section {
+    background: #f8fafc;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    margin-bottom: 15px;
+}
+
+.card-content a {
+    color: var(--secondary);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* CTA */
+.cta-section {
+    padding: 65px 0;
+    text-align: center;
+    background: var(--light);
+}
+
+.cta-section h2 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.cta-section p {
+    margin-bottom: 20px;
+}
+
+/* PAGE BANNER */
+.page-banner {
+    background: var(--light);
+    padding: 55px 0;
+}
+
+.page-banner h1 {
+    color: var(--primary);
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+/* SERVICES DETAIL */
+.service-list {
+    display: grid;
+    gap: 30px;
+}
+
+.service-detail {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.service-detail img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.service-detail h2 {
+    margin-bottom: 10px;
+}
+
+.service-detail ul {
+    margin: 15px 0 15px 25px;
+}
+
+.center {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* BOOKING FORM */
+.booking-form {
+    max-width: 900px;
+    margin: auto;
+    background: var(--light);
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.booking-form h2 {
+    margin: 10px 0 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #94a3b8;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 1rem;
+    background: var(--white);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--secondary);
+}
+
+/* Error state */
+.input-error {
+    border-color: var(--error) !important;
+    background-color: var(--error-bg) !important;
+}
+
+/* FIELDSET / RADIO */
+fieldset {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+.radio-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 25px;
+}
+
+.radio-label input {
+    width: auto;
+}
+
+/* CHECKBOX */
+.checkbox-group {
+    margin-bottom: 20px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+}
+
+.checkbox-group input {
+    width: auto;
+}
+
+/* BUTTON GROUP */
+.button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+/* RESULT */
+.result-box {
+    background: var(--white);
+    border-left: 5px solid var(--secondary);
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 80px;
+}
+
+.result-box strong {
+    color: var(--primary);
+}
+
+.result-box ul {
+    margin: 10px 0 10px 20px;
+}
+
+/* FOOTER */
+.site-footer {
+    background: var(--dark);
+    color: #e5e7eb;
+    padding: 25px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    .service-detail {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 0;
+    }
+
+    .navigation {
+        width: 100%;
+    }
+
+    .navigation a {
+        padding: 7px 9px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 50px 0;
+    }
+
+    .page-banner h1 {
+        font-size: 2rem;
+    }
+}

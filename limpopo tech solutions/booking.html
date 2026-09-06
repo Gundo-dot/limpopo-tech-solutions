@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limpopo Tech Solutions | Booking & Quote</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <div class="logo">Limpopo Tech Solutions</div>
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a class="active" href="booking.html">Booking / Quote</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div class="container">
+                <p class="eyebrow">SERVICE REQUEST</p>
+                <h1>Service Booking & Quote Calculator</h1>
+                <p>Complete the form below to calculate an estimated service price.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <form id="quoteForm" class="booking-form" novalidate>
+                    <h2>Customer Information</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="customerName">Full Name</label>
+                            <input type="text" id="customerName" placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="example@email.com">
+                        </div>
+                    </div>
+
+                    <h2>Service Information</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="service">Select Service</label>
+                            <select id="service">
+                                <option value="">-- Select a service --</option>
+                                <option value="repair">Computer Repair - R250</option>
+                                <option value="network">Networking - R350</option>
+                                <option value="web">Web Design - R1500</option>
+                                <option value="support">IT Support - R200</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="devices">Number of Devices</label>
+                            <input type="number" id="devices" value="1" min="1" max="20">
+                        </div>
+                    </div>
+
+                    <fieldset>
+                        <legend>Service Urgency</legend>
+                        <label class="radio-label">
+                            <input type="radio" name="urgency" value="standard" checked>
+                            Standard Service
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="urgency" value="urgent">
+                            Urgent Service (+20%)
+                        </label>
+                    </fieldset>
+
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" id="onsite">
+                            Add on-site visit (+R150)
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Problem Description</label>
+                        <textarea id="description" rows="6" placeholder="Describe your IT problem..."></textarea>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="button" class="btn" id="calculateBtn">Calculate Quote</button>
+                        <button type="button" class="btn btn-dark" id="submitBtn">Submit Booking</button>
+                        <button type="reset" class="btn btn-light">Clear</button>
+                    </div>
+
+                    <div id="result" class="result-box" aria-live="polite">
+                        Your estimated quote will appear here.
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Limpopo Tech Solutions. Computer Programming Level 4 Assessment Project.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
